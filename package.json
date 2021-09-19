@@ -1,0 +1,19 @@
+{
+	"name": "coding-help",
+	"version": "1.0.0",
+	"description": "This module is very useful for getting help with features that JavaScript doesn't provide!",
+	"license": "MIT",
+	"repository": "arnavthorat78/Coding-Help-Module",
+	"main": "./src/index.js",
+	"types": "./src/index.d.ts",
+	"keywords": [
+		"extra",
+		"functionality",
+		"javascript",
+		"nodejs",
+		"npm",
+		"arnavcoder",
+		"help",
+		"coding"
+	]
+}
