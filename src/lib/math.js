@@ -19,3 +19,50 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
+
+const add = (...numbers) => {
+	let total = 0;
+	numbers.forEach((num) => {
+		total += num;
+	});
+	return total;
+};
+const subtract = (...numbers) => {
+	let total = numbers[0];
+	numbers.forEach((value, index) => {
+		if (index !== 0) {
+			total -= value;
+		}
+	});
+	return total;
+};
+const multiply = (...numbers) => {
+	let total = numbers[0];
+	numbers.forEach((value, index) => {
+		if (index !== 0) {
+			total *= value;
+		}
+	});
+	return total;
+};
+const divide = (...numbers) => {
+	let total = numbers[0];
+	numbers.forEach((value, index) => {
+		if (index !== 0) {
+			total /= value;
+		}
+	});
+	return total;
+};
+
+const randInt = (min = 0, max = 2) => {
+	return Math.floor(Math.random() * (max - min)) + min;
+};
+
+module.exports = {
+	add,
+	subtract,
+	multiply,
+	divide,
+	randInt,
+};

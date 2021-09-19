@@ -8,12 +8,11 @@
 	"types": "./src/index.d.ts",
 	"keywords": [
 		"extra",
-		"functionality",
-		"javascript",
 		"nodejs",
 		"npm",
 		"arnavcoder",
 		"help",
-		"coding"
+		"coding",
+		"math"
 	]
 }

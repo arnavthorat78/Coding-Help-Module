@@ -20,6 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-const version = "1.0.0";
+const math = require("./lib/math");
 
-module.exports = { version };
+module.exports = {
+	add: math.add,
+	subtract: math.subtract,
+	multiply: math.multiply,
+	divide: math.divide,
+	randInt: math.randInt,
+};
