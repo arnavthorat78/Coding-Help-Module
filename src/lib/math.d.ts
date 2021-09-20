@@ -21,6 +21,17 @@
 // SOFTWARE.
 
 /**
+ * The PI constant value. This is the ratio of the circumference of a circle to its diameter.
+ *
+ * This value is compressed down to only 15 decimal digits, since NodeJS automatically compresses it to that value.
+ */
+export const PI: number;
+/**
+ * The mathematics constant E. This is Euler's number, the base of natural logarithms.
+ */
+export const E: number;
+
+/**
  * Add multiple numbers together.
  *
  * The numbers are added like this:
@@ -69,3 +80,55 @@ export const divide: (...numbers: number[]) => number;
  * @returns The random number selected.
  */
 export const randInt: (min?: number, max?: number) => number;
+
+/**
+ * Get the maximum number from a list of numbers.
+ *
+ * @param numbers All of the numbers to see which is the greatest number.
+ * @returns The greatest number found.
+ */
+export const getMaxNum: (...numbers: number[]) => number;
+/**
+ * Get the lowest number from a list of numbers.
+ *
+ * _Note: This method is dependent on `getMaxNum`._
+ *
+ * @param numbers The numbers to find the lowest number from.
+ * @returns The lowest number found.
+ */
+export const getMinNum: (...numbers: number[]) => number;
+
+/**
+ * Get the average number from a list of numbers.
+ *
+ * @param numbers All of the numbers to get the average from.
+ * @returns The average of the numbers.
+ */
+export const avg: (...numbers: number[]) => number;
+
+/**
+ * Get a compass direction (e.g. E), and convert it into degrees (e.g. 90).
+ *
+ * List of available compass letters:
+ *
+ * *  N
+ * *  NE
+ * *  E
+ * *  SE
+ * *  S
+ * *  SW
+ * *  W
+ * *  NW
+ *
+ * @param compass The compass direction to convert.
+ * @returns The converted number. This can be an array of numbers if _N_ was passed into `compass`, since this value has 0 and 360. Otherwise, the value is a number. Also, if the compass was not found, then `undefined` is returned.
+ */
+export const compassToDegrees: (compass: string) => number | number[];
+
+/**
+ * Remove the decimal point of a number.
+ *
+ * @param number A number to remove the decimal point.
+ * @returns The integer form of the number.
+ */
+export const removeDecimal: (number: number) => number;

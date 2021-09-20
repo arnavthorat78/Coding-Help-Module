@@ -20,6 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+const PI = 3.141_592_653_589_793;
+const E = 2.71828;
+
 const add = (...numbers) => {
 	let total = 0;
 	numbers.forEach((num) => {
@@ -59,10 +62,55 @@ const randInt = (min = 0, max = 2) => {
 	return Math.floor(Math.random() * (max - min)) + min;
 };
 
+const getMaxNum = (...numbers) => {
+	let maxNum = null;
+	numbers.forEach((num) => {
+		if (num > maxNum) {
+			maxNum = num;
+		}
+	});
+	return maxNum;
+};
+const getMinNum = (...numbers) => {
+	let minNum = getMaxNum(...numbers);
+	numbers.forEach((num) => {
+		if (num < minNum) {
+			minNum = num;
+		}
+	});
+	return minNum;
+};
+
+const avg = (...numbers) => {
+	let total = 0;
+	numbers.forEach((num) => {
+		total += num;
+	});
+	return total / numbers.length;
+};
+
+const compassToDegrees = (compass) => {
+	const degrees = [[0, 360], 45, 90, 135, 180, 225, 270, 315];
+	const letters = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+
+	return degrees[letters.indexOf(compass)];
+};
+
+const removeDecimal = (number) => {
+	return Number(number.toString().split(".")[0]);
+};
+
 module.exports = {
+	PI,
+	E,
 	add,
 	subtract,
 	multiply,
 	divide,
 	randInt,
+	getMaxNum,
+	getMinNum,
+	avg,
+	compassToDegrees,
+	removeDecimal,
 };
