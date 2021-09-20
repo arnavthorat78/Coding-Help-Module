@@ -21,7 +21,7 @@
 // SOFTWARE.
 
 const PI = 3.141_592_653_589_793;
-const E = 2.71828;
+const E = 2.718_281_828_459_045;
 
 const add = (...numbers) => {
 	let total = 0;
@@ -57,8 +57,17 @@ const divide = (...numbers) => {
 	});
 	return total;
 };
+const power = (...numbers) => {
+	let total = numbers[0];
+	numbers.forEach((value, index) => {
+		if (index !== 0) {
+			total = total ** value;
+		}
+	});
+	return total;
+};
 
-const randInt = (min = 0, max = 2) => {
+const randNum = (min = 0, max = 2) => {
 	return Math.floor(Math.random() * (max - min)) + min;
 };
 
@@ -107,7 +116,8 @@ module.exports = {
 	subtract,
 	multiply,
 	divide,
-	randInt,
+	power,
+	randNum,
 	getMaxNum,
 	getMinNum,
 	avg,

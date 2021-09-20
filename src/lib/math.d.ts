@@ -28,6 +28,8 @@
 export const PI: number;
 /**
  * The mathematics constant E. This is Euler's number, the base of natural logarithms.
+ *
+ * This value is compressed down to only 15 decimal digits, since NodeJS automatically compresses it to that value.
  */
 export const E: number;
 
@@ -71,15 +73,25 @@ export const multiply: (...numbers: number[]) => number;
  * @returns The total of the divided numbers.
  */
 export const divide: (...numbers: number[]) => number;
+/**
+ * Raise a number to the power of others.
+ *
+ * The numbers are raised in an order by what you passed in.
+ * If the numbers are, for example, `power(12, 2, 2)`, then it will be _(12 ** 2) ** 2_, which equals _20736_.
+ *
+ * @param numbers All of the numbers to raise. Be aware that these are raised in order!
+ * @returns All of the raised numbers' total.
+ */
+export const power: (...numbers: number[]) => number;
 
 /**
- * Get a random integer from `min` to `max`. Returns a number with the random number.
+ * Get a random number from `min` to `max`. Returns a number with the random number.
  *
- * @param min The minimum number of the range from where to get the random integer. This is included in the random selection.
+ * @param min The minimum number of the range from where to get the random number. This is included in the random selection.
  * @param max The maximum number of the range for the random number. **This is _not_ included in the random selection.**
  * @returns The random number selected.
  */
-export const randInt: (min?: number, max?: number) => number;
+export const randNum: (min?: number, max?: number) => number;
 
 /**
  * Get the maximum number from a list of numbers.

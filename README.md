@@ -24,8 +24,42 @@ To use this in your project, you can simply use `require`.
 const codingHelp = require("coding-help");
 ```
 
-## Not much yet!
+## Math
 
-There isn't much to display yet. There is the only the `version` variable intended for testing, which will be removed in _v1.0.5_.
+The `math` part of the Coding Help module is very helpful for doing mathematics activities!
 
-But soon, more will come!
+To import the math section only, simple run the following command.
+
+```js
+const mathHelp = require("coding-help").math;
+```
+
+### Table
+
+See the table below to look for the commands in the `math` section.
+
+| Command            | Description                                                                                                          |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| `PI`               | This is a variable which represents the ratio of the circumference of a circle to its diameter.                      |
+| `E`                | The mathematical constant E. This is Euler's number, the base of natural logarithms.                                 |
+| `add`              | Add multiple numbers together.                                                                                       |
+| `subtract`         | Subtract multiple numbers together in order.                                                                         |
+| `multiply`         | Multiply multiple numbers together in order.                                                                         |
+| `divide`           | Divide multiple numbers in the order passed in.                                                                      |
+| `power`            | Get the power of multiple numbers together.                                                                          |
+| `randNum`          | Get a random number from a minimum number to a maximum number.                                                       |
+| `getMaxNum`        | Get the maximum number from a list of numbers.                                                                       |
+| `getMinNum`        | Get the minimum number from a list of numbers. _This number is dependent on `getMaxNum`!_                            |
+| `avg`              | Get the average number from a list of numbers.                                                                       |
+| `compassToDegrees` | Convert a compass heading (e.g. S), and convert it to degrees. **Set to be moved!**                                  |
+| `removeDecimal`    | Remove the decimal from a number. This is helpful if you want to convert a float to an integer. **Set to be moved!** |
+
+### Documentation
+
+Right now, unfortunately, there is no documentation for this module.
+
+But, if there are many total downloads, a documentation website may come out!
+
+## More coming soon!
+
+Soon, we are going to provide more functionality with `strings`, `numbers`, `booleans`, and much more, to make your code easier to read and quicker to write!
