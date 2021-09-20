@@ -23,19 +23,17 @@
 const math = require("./lib/math");
 
 module.exports = {
-	math: {
-		PI: math.PI,
-		E: math.E,
-		add: math.add,
-		subtract: math.subtract,
-		multiply: math.multiply,
-		divide: math.divide,
-		power: math.power,
-		randNum: math.randNum,
-		getMaxNum: math.getMaxNum,
-		getMinNum: math.getMinNum,
-		avg: math.avg,
-		compassToDegrees: math.compassToDegrees,
-		removeDecimal: math.removeDecimal,
-	},
+	PI: math.PI,
+	E: math.E,
+	add: math.add,
+	subtract: math.subtract,
+	multiply: math.multiply,
+	divide: math.divide,
+	power: math.power,
+	randNum: math.randNum,
+	getMaxNum: math.getMaxNum,
+	getMinNum: math.getMinNum,
+	avg: math.avg,
+	compassToDegrees: math.compassToDegrees,
+	removeDecimal: math.removeDecimal,
 };
