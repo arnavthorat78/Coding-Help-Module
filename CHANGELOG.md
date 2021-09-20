@@ -2,6 +2,13 @@
 
 This file lists all of the updates.
 
+## v1.1.5
+
+This version had the simple `booleans` section!
+
+-   The booleans section had come out.
+-   A few more bug fixes came in place.
+
 ## v1.1.0
 
 This version was a bug fix version!

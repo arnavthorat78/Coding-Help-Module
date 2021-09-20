@@ -28,12 +28,6 @@ const codingHelp = require("coding-help");
 
 The `math` part of the Coding Help module is very helpful for doing mathematics activities!
 
-To import the math section only, simple run the following command.
-
-```js
-const mathHelp = require("coding-help").math;
-```
-
 ### Table
 
 See the table below to look for the commands in the `math` section.
@@ -54,7 +48,20 @@ See the table below to look for the commands in the `math` section.
 | `compassToDegrees` | Convert a compass heading (e.g. S), and convert it to degrees. **Set to be moved!**                                  |
 | `removeDecimal`    | Remove the decimal from a number. This is helpful if you want to convert a float to an integer. **Set to be moved!** |
 
-### Documentation
+## Booleans
+
+The `boolean` part is helpful for boolean tasks. Right now, there isn't much, but soon, more will come!
+
+### Table
+
+See the table below to look for commands in `booleans`.
+
+| Command      | Description                                                           |
+| ------------ | --------------------------------------------------------------------- |
+| `findStatus` | See if a value is greater than, less than, or equal to another value. |
+| `isNothing`  | See if a value is nothing, according to JavaScript.                   |
+
+## Documentation
 
 Right now, unfortunately, there is no documentation for this module.
 
@@ -62,4 +69,4 @@ But, if there are many total downloads, a documentation website may come out!
 
 ## More coming soon!
 
-Soon, we are going to provide more functionality with `strings`, `numbers`, `booleans`, and much more, to make your code easier to read and quicker to write!
+Soon, we are going to provide more functionality with `strings`, `numbers`, and much more, to make your code easier to read and quicker to write!

@@ -20,25 +20,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-const math = require("./lib/math");
-const bool = require("./lib/bool");
-
-module.exports = {
-	// Math
-	PI: math.PI,
-	E: math.E,
-	add: math.add,
-	subtract: math.subtract,
-	multiply: math.multiply,
-	divide: math.divide,
-	power: math.power,
-	randNum: math.randNum,
-	getMaxNum: math.getMaxNum,
-	getMinNum: math.getMinNum,
-	avg: math.avg,
-	compassToDegrees: math.compassToDegrees,
-	removeDecimal: math.removeDecimal,
-	// Boolean
-	findStatus: bool.findStatus,
-	isNothing: bool.isNothing,
+/**
+ * Find the status of x and y compared (either <, >, or =).
+ *
+ * @param x The first value to compare against y.
+ * @param y The second value to compare against x.
+ * @returns An object containing if x was larger or less than y, and vice versa. It also contains the JavaScript operator against what it was against, and a sentence that is user-friendly. If the comparison failed, `null` is returned.
+ */
+export const findStatus: (
+	x: any,
+	y: any
+) => {
+	x: string;
+	y: string;
+	operator: string;
+	sentence: string;
 };
+
+/**
+ * Check if a value is nothing (false).
+ *
+ * @param value The value to check.
+ * @returns Returns `true` if there is nothing, else `false`.
+ */
+export const isNothing: (value: any) => boolean;

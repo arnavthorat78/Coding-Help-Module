@@ -20,25 +20,39 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-const math = require("./lib/math");
-const bool = require("./lib/bool");
+const findStatus = (x, y) => {
+	if (x < y) {
+		return {
+			x: "less",
+			y: "greater",
+			operator: "<",
+			sentence: `x (${x}) is less than (<) y (${y}).`,
+		};
+	} else if (x > y) {
+		return {
+			x: "greater",
+			y: "less",
+			operator: "<",
+			sentence: `x (${x}) is greater than (>) y (${y}).`,
+		};
+	} else if (x == y) {
+		return {
+			x: "equal",
+			y: "equal",
+			operator: "==",
+			sentence: `x (${x}) is equal to (=) y (${y}).`,
+		};
+	}
+
+	return null;
+};
+
+const isNothing = (value) => {
+	if (!value) return true;
+	else return false;
+};
 
 module.exports = {
-	// Math
-	PI: math.PI,
-	E: math.E,
-	add: math.add,
-	subtract: math.subtract,
-	multiply: math.multiply,
-	divide: math.divide,
-	power: math.power,
-	randNum: math.randNum,
-	getMaxNum: math.getMaxNum,
-	getMinNum: math.getMinNum,
-	avg: math.avg,
-	compassToDegrees: math.compassToDegrees,
-	removeDecimal: math.removeDecimal,
-	// Boolean
-	findStatus: bool.findStatus,
-	isNothing: bool.isNothing,
+	findStatus,
+	isNothing,
 };
