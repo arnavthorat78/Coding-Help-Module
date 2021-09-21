@@ -1,7 +1,7 @@
 {
 	"name": "coding-help",
 	"version": "1.1.5",
-	"description": "This module is very useful for getting help with features that JavaScript doesn't provide!",
+	"description": "Get features that NodeJS doesn't provide!",
 	"license": "MIT",
 	"repository": "arnavthorat78/Coding-Help-Module",
 	"main": "./src/index.js",
@@ -13,6 +13,9 @@
 		"arnavcoder",
 		"help",
 		"coding",
-		"math"
+		"math",
+		"boolean",
+		"number",
+		"string"
 	]
 }
