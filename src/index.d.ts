@@ -20,6 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+// Math //
+
 /**
  * The PI constant value. This is the ratio of the circumference of a circle to its diameter.
  *
@@ -145,6 +147,8 @@ export const compassToDegrees: (compass: string) => number | number[];
  */
 export const removeDecimal: (number: number) => number;
 
+// Boolean //
+
 /**
  * Find the status of x and y compared (either <, >, or =).
  *
@@ -169,3 +173,67 @@ export const findStatus: (
  * @returns Returns `true` if there is nothing, else `false`.
  */
 export const isNothing: (value: any) => boolean;
+
+// Number //
+
+/**
+ * Remove the decimal point of a number.
+ *
+ * @param number A number to remove the decimal point.
+ * @returns The integer form of the number.
+ */
+export const removeDecimal: (number: number) => number;
+
+/**
+ * Count the amount of each digit, from 0-9, in a number.
+ *
+ * The method returns an object, containing information of how many of each numbers there were.
+ * _Please note that if there was an error with calcutating the amount of numbers, `NaN` will be provided as a key, with `NaN` as the value._
+ *
+ * When the object is returned, the value should be the amount of digits. However, it must be called using square-bracket notation, as the keys are numbers.
+ * ```js
+ * const codingHelp = require("coding-help");
+ *
+ * console.log(codingHelp.countDigits(12345)[1]);
+ * // =>  '1': 1
+ * ```
+ *
+ * @param num The number to count the digits of.
+ * @returns An object containing keys described in the description.
+ */
+export const countDigits: (num: number) => {
+	0: number;
+	1: number;
+	2: number;
+	3: number;
+	4: number;
+	5: number;
+	6: number;
+	7: number;
+	8: number;
+	9: number;
+};
+
+/**
+ * Get the length of a number.
+ *
+ * @param num The number to get the length from.
+ * @returns The length of the number.
+ */
+export const lengthOfNumber: (num: number) => number;
+
+/**
+ * See if a number is an integer.
+ *
+ * @param num The number to check whether or not it is an integer.
+ * @returns A boolean indicating if it is an integer or not.
+ */
+export const integer: (num: number) => boolean;
+
+/**
+ * Convert a number to an ordinal (e.g. 78 into 78th).
+ *
+ * @param num The number to convert to an ordinal.
+ * @returns The ordinal number (which is a string). The returned value is the number suffixed with its appropriate ordinal.
+ */
+export const toOrdinal: (num: number) => string;

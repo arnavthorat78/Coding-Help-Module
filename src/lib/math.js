@@ -105,10 +105,6 @@ const compassToDegrees = (compass) => {
 	return degrees[letters.indexOf(compass)];
 };
 
-const removeDecimal = (number) => {
-	return Number(number.toString().split(".")[0]);
-};
-
 module.exports = {
 	PI,
 	E,
@@ -122,5 +118,4 @@ module.exports = {
 	getMinNum,
 	avg,
 	compassToDegrees,
-	removeDecimal,
 };

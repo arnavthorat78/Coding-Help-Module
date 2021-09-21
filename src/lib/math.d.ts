@@ -136,11 +136,3 @@ export const avg: (...numbers: number[]) => number;
  * @returns The converted number. This can be an array of numbers if _N_ was passed into `compass`, since this value has 0 and 360. Otherwise, the value is a number. Also, if the compass was not found, then `undefined` is returned.
  */
 export const compassToDegrees: (compass: string) => number | number[];
-
-/**
- * Remove the decimal point of a number.
- *
- * @param number A number to remove the decimal point.
- * @returns The integer form of the number.
- */
-export const removeDecimal: (number: number) => number;

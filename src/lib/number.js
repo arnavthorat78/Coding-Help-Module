@@ -20,31 +20,70 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-const math = require("./lib/math");
-const bool = require("./lib/bool");
-const number = require("./lib/number");
+const removeDecimal = (number) => {
+	return Number(number.toString().split(".")[0]);
+};
+
+const countDigits = (num) => {
+	const number = num.toString();
+	let numbers = [...number];
+
+	let amountOfDigits = {
+		0: 0,
+		1: 0,
+		2: 0,
+		3: 0,
+		4: 0,
+		5: 0,
+		6: 0,
+		7: 0,
+		8: 0,
+		9: 0,
+	};
+
+	numbers.forEach((value) => {
+		amountOfDigits[Number(value)] += 1;
+	});
+
+	return amountOfDigits;
+};
+
+const lengthOfNumber = (num) => {
+	return num.toString().length;
+};
+
+const integer = (num) => {
+	return !num.toString().includes(".");
+};
+
+const toOrdinial = (num) => {
+	const number = num.toString();
+
+	if (
+		number.endsWith("0") ||
+		number.endsWith("4") ||
+		number.endsWith("5") ||
+		number.endsWith("6") ||
+		number.endsWith("7") ||
+		number.endsWith("8") ||
+		number.endsWith("9")
+	) {
+		return number + "th";
+	} else if (number.endsWith("1")) {
+		return number + "st";
+	} else if (number.endsWith("2")) {
+		return number + "nd";
+	} else if (number.endsWith("3")) {
+		return number + "rd";
+	} else {
+		return number;
+	}
+};
 
 module.exports = {
-	// Math
-	PI: math.PI,
-	E: math.E,
-	add: math.add,
-	subtract: math.subtract,
-	multiply: math.multiply,
-	divide: math.divide,
-	power: math.power,
-	randNum: math.randNum,
-	getMaxNum: math.getMaxNum,
-	getMinNum: math.getMinNum,
-	avg: math.avg,
-	compassToDegrees: math.compassToDegrees,
-	// Boolean
-	findStatus: bool.findStatus,
-	isNothing: bool.isNothing,
-	// Number
-	removeDecimal: number.removeDecimal,
-	countDigits: number.countDigits,
-	lengthOfNumber: number.lengthOfNumber,
-	integer: number.integer,
-	toOrdinal: number.toOrdinal,
+	removeDecimal,
+	countDigits,
+	lengthOfNumber,
+	integer,
+	toOrdinial,
 };
