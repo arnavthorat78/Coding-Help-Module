@@ -6,7 +6,7 @@
 
 [![NPM](https://nodei.co/npm/coding-help.png?downloads=true&downloadRank=true)](https://nodei.co/npm/coding-help/)
 
-This module is very useful for getting help with features that JavaScript doesn't provide!
+> Get features that NodeJS doesn't provide!
 
 ## By the way...
 
