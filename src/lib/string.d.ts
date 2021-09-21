@@ -100,3 +100,60 @@ export const containsWord: (str: string, searchStr: string) => boolean;
  * @returns The number of occurences in `str`.
  */
 export const countWordOccurences: (str: string, substr: string, caseSensitive?: boolean) => number;
+
+/**
+ * Create a HTML tag, with the tag name, the content, and the attributes.
+ *
+ * ```js
+ * const codingHelp = require("coding-help");
+ *
+ * console.log(codingHelp.createHTMLTag("a", "See coding-help!", { href: "https://npmjs.com/package/coding-help", }));
+ * // =>  <a href="https://npmjs.com/package/coding-help">See coding-help!</a>
+ * ```
+ *
+ * @param tag The tag name of the HTML element.
+ * @param content The content of the HTML.
+ * @param attributes An object containing the attributes of the HTML element.
+ * @returns A string containing the valid HTML code.
+ */
+export const createHTMLTag: (tag: string, content: string, attributes?: object) => string;
+
+/**
+ * See if a string is alpha (contains only letters).
+ *
+ * @param str The string to test on.
+ * @returns A boolean, indicating whether or not the string is alpha or not.
+ */
+export const isAlpha: (str: string) => boolean;
+/**
+ * See if the string is numeric alpha (contains only letters and numbers).
+ *
+ * @param str The string to test on.
+ * @returns A boolean, indicating whether or not the string is numeric alpha or not.
+ */
+export const isAlphaNumeric: (str: string) => boolean;
+
+/**
+ * See if the string is empty. This means that it either consists of only whitespace, or it is equal to `null` or `undefined`.
+ *
+ * @param str The string to test if it is empty or not.
+ * @returns A booleaning indicating whether or not the string is empty.
+ */
+export const isEmpty: (str: string) => boolean;
+
+/**
+ * Pad the string from the start and end with the desired length and characters on each side of the string.
+ *
+ * ```js
+ * const codingHelp = require("coding-help");
+ *
+ * console.log(codingHelp.padString("Information for Coding Help", 5, "-"));
+ * // =>  -----Information for Coding Help-----
+ * ```
+ *
+ * @param str The string to pad.
+ * @param len The length of the padding.
+ * @param char The character to pad with. Defaults to a space.
+ * @returns A finalised padded string.
+ */
+export const padString: (str: string, len: number, char?: string) => string;

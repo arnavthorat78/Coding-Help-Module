@@ -101,6 +101,49 @@ const countWordOccurences = (str, substr, caseSensitive = true) => {
 	return occurences;
 };
 
+const createHTMLTag = (tag, content, attributes = {}) => {
+	let attributeString = "";
+	for (let attribute in attributes) {
+		attributeString = attributeString + ` ${attribute}="${attributes[attribute]}"`;
+	}
+
+	const fullHTML = `<${tag}${attributeString}>${content}</${tag}>`;
+
+	return fullHTML;
+};
+
+const isAlpha = (str) => {
+	const alphaRegExp = /^[A-Za-z]+$/g;
+	return alphaRegExp.test(str);
+};
+const isAlphaNumeric = (str) => {
+	const alphaRegExp = /^[A-Za-z0-9]+$/;
+	return alphaRegExp.test(str);
+};
+
+const isEmpty = (str) => {
+	if (/\s/g.test(str) || typeof str === "undefined" || str === null) return true;
+	else return false;
+};
+
+const padString = (str, len, char = " ") => {
+	let stringArr = [str];
+
+	let startPad = "";
+	for (let i = 0; i < len; i++) {
+		startPad = startPad + char;
+	}
+	let endPad = "";
+	for (let i = 0; i < len; i++) {
+		endPad = endPad + char;
+	}
+
+	stringArr.unshift(startPad);
+	stringArr.push(endPad);
+
+	return stringArr.join("");
+};
+
 module.exports = {
 	between,
 	toCamelCase,
@@ -108,4 +151,9 @@ module.exports = {
 	removeWhitespace,
 	containsWord,
 	countWordOccurences,
+	createHTMLTag,
+	isAlpha,
+	isAlphaNumeric,
+	isEmpty,
+	padString,
 };

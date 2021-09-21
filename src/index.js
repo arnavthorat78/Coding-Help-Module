@@ -55,4 +55,8 @@ module.exports = {
 	removeWhitespace: string.removeWhitespace,
 	containsWord: string.containsWord,
 	countWordOccurences: string.countWordOccurences,
+	createHTMLTag: string.createHTMLTag,
+	isAlpha: string.isAlpha,
+	isAlphaNumeric: string.isAlphaNumeric,
+	isEmpty: string.isEmpty,
 };
