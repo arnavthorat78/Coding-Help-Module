@@ -4,6 +4,8 @@
 ![npm](https://img.shields.io/npm/dt/coding-help?color=orange&label=downloads&logo=downloads&logoColor=grey)
 ![Lines of code](https://img.shields.io/tokei/lines/github/arnavthorat78/Coding-Help-Module?color=blue&label=total%20lines&logo=lines&logoColor=grey)
 
+[![NPM](https://nodei.co/npm/coding-help.png?downloads=true&downloadRank=true)](https://nodei.co/npm/coding-help/)
+
 This module is very useful for getting help with features that JavaScript doesn't provide!
 
 ## By the way...
