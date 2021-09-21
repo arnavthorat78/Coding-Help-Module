@@ -23,6 +23,7 @@
 const math = require("./lib/math");
 const bool = require("./lib/bool");
 const number = require("./lib/number");
+const string = require("./lib/string");
 
 module.exports = {
 	// Math
@@ -47,4 +48,11 @@ module.exports = {
 	lengthOfNumber: number.lengthOfNumber,
 	integer: number.integer,
 	toOrdinal: number.toOrdinal,
+	// String
+	between: string.between,
+	toCamelCase: string.toCamelCase,
+	toTitleCase: string.toTitleCase,
+	removeWhitespace: string.removeWhitespace,
+	containsWord: string.containsWord,
+	countWordOccurences: string.countWordOccurences,
 };
