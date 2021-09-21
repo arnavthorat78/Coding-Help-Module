@@ -144,6 +144,45 @@ const padString = (str, len, char = " ") => {
 	return stringArr.join("");
 };
 
+const isLowerOnly = (str) => {
+	const lowerRegExp = /^[a-z]+$/g;
+
+	return lowerRegExp.test(str);
+};
+const isUpperOnly = (str) => {
+	const upperRegExp = /^[A-Z]+$/g;
+
+	return upperRegExp.test(str);
+};
+
+const isNumericOnly = (str, numOnly = true) => {
+	const numOnlyRegExp = /^[0-9]+$/g;
+	const otherNumRegExp = /^[0-9]+|-|\.|(?:^|\s)(Infinity)(?=\s|$)|(?:^|\s)(-Infinity)(?=\s|$)$/g;
+
+	if (!numOnly) {
+		return otherNumRegExp.test(str);
+	} else {
+		return numOnlyRegExp.test(str);
+	}
+};
+
+const repeat = (str, num, seperator = "", lastChar = "") => {
+	if (num < 0) {
+		return null;
+	}
+
+	let string = "";
+	for (let i = 0; i < num; i++) {
+		if (i + 1 == num) {
+			string += `${str}${lastChar}`;
+		} else {
+			string += `${str}${seperator}`;
+		}
+	}
+
+	return string;
+};
+
 module.exports = {
 	between,
 	toCamelCase,
@@ -156,4 +195,8 @@ module.exports = {
 	isAlphaNumeric,
 	isEmpty,
 	padString,
+	isLowerOnly,
+	isUpperOnly,
+	isNumericOnly,
+	repeat,
 };

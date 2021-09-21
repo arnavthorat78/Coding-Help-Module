@@ -157,3 +157,38 @@ export const isEmpty: (str: string) => boolean;
  * @returns A finalised padded string.
  */
 export const padString: (str: string, len: number, char?: string) => string;
+
+/**
+ * Check if a string contains only lower case characters. Also, make sure it contains no whitespace, no uppercase letters, no numbers, and no symbols.
+ *
+ * @param str The string to test.
+ * @return A boolean indicating whether or not the string is lowercase only.
+ */
+export const isLowerOnly: (str: string) => boolean;
+/**
+ * Check if a string contains only uppercase characters. Also, make sure it contains no whitespace, no lowercase letters, no numbers, and no symbols.
+ *
+ * @param str The string to test.
+ * @return A boolean indicating whether or not the string is uppercase only.
+ */
+export const isUpperOnly: (str: string) => boolean;
+
+/**
+ * Check if a string is numeric only (only contains numbers, and, if `numOnly` is false, search for decimals, dashes, 'Infinity', and '-Infinity').
+ *
+ * @param str The string to search.
+ * @param numOnly Optional. If this is `true` (by default, it is), then it will only search for numbers, else, it will search for numbers, as well as decimal points, dashes for negative numbers, 'Infinity', and '-Infinity'.
+ * @returns A boolean indicating if the string is only numeric or not.
+ */
+export const isNumericOnly: (str: string, numOnly?: boolean) => boolean;
+
+/**
+ * Repeat a string `num` times.
+ *
+ * @param str The string to repeat.
+ * @param num The number of times to repeat the string.
+ * @param seperator The seperator for the strings. This is in effect after all repeats, except the last one. Default is nothing.
+ * @param lastChar The last character. This is added when the repeat loop has concluded. By default, it is nothing.
+ * @returns A string that was repeated.
+ */
+export const repeat: (str: string, num: number, seperator: string, lastChar: string) => string;
