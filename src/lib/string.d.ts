@@ -192,3 +192,44 @@ export const isNumericOnly: (str: string, numOnly?: boolean) => boolean;
  * @returns A string that was repeated.
  */
 export const repeat: (str: string, num: number, seperator: string, lastChar: string) => string;
+
+/**
+ * Makes a string a valid URL name. It preforms the following operations on the string before returning it.
+ *
+ * *  Removes Latin letters and replaces with English letters.
+ * *  Converts the whole string to lower case.
+ * *  Replaces two or more spaces with single spaces (temporary).
+ * *  Removes punctuation.
+ * *  Trims the string.
+ * *  Replaces the inner spaces with dashes.
+ *
+ * @param str The string to transform into a URL name.
+ * @returns The URL name.
+ */
+export const urlName: (str: string) => string;
+
+/**
+ * Remove all Latin letters in a string.
+ *
+ * Noticed an issue with the method? It is still in _BETA_, so if there are any issues, please report it on the [Issues page](https://github.com/arnavthorat78/Coding-Help-Module/issues)!
+ *
+ * @param str The string to remove the Latin letters from.
+ * @returns The string with the Latin letters replaced with proper English letters.
+ */
+export const removeLatin: (str: string) => string;
+
+/**
+ * Replace all occurences in a string. This is similar to ES2021's method `replaceAll`.
+ *
+ * @param str The string to replace a specific word in.
+ * @param findStr The string to find in `str`.
+ * @param replaceStr The string to replace `findStr` with.
+ * @param caseSensitive Optional. Defaults to `true`. Make the search case-sensitive, and vice versa.
+ * @returns The string which was replaced.
+ */
+export const replaceAll: (
+	str: string,
+	findStr: string,
+	replaceStr: string,
+	caseSensitive?: boolean
+) => string;

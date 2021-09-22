@@ -183,6 +183,27 @@ const repeat = (str, num, seperator = "", lastChar = "") => {
 	return string;
 };
 
+const urlName = (str) => {
+	return str
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.toLowerCase()
+		.replace(/\s{2,}/g, " ")
+		.replace(/[!"#$%&'()*+,-.\\/:;<=>?@[\]^_`{|}~]/g, "")
+		.trim()
+		.replace(/\s/g, "-");
+};
+
+const removeLatin = (str) => {
+	return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+};
+
+const replaceAll = (str, findStr, replaceStr, caseSensitive = true) => {
+	let replaceRegExp = new RegExp(findStr, `g${!caseSensitive ? "i" : ""}`);
+
+	return str.replace(replaceRegExp, replaceStr);
+};
+
 module.exports = {
 	between,
 	toCamelCase,
@@ -199,4 +220,7 @@ module.exports = {
 	isUpperOnly,
 	isNumericOnly,
 	repeat,
+	removeLatin,
+	replaceAll,
+	urlName,
 };

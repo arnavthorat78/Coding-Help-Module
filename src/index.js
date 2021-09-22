@@ -62,4 +62,6 @@ module.exports = {
 	isLowerOnly: string.isLowerOnly,
 	isUpperOnly: string.isUpperOnly,
 	isNumericOnly: string.isNumericOnly,
+	removeLatin: string.removeLatin,
+	urlName: string.urlName,
 };
