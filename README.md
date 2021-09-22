@@ -1,5 +1,7 @@
 # Coding-Help-Module
 
+<img src="https://arnavthorat78.github.io/Google-Home/img/Coding%20Help.png" alt="Logo" width="137.5" height="163" />
+
 ![npm](https://img.shields.io/npm/v/coding-help?color=red&label=npm&logo=version&logoColor=grey)
 ![npm](https://img.shields.io/npm/dt/coding-help?color=orange&label=downloads&logo=downloads&logoColor=grey)
 ![GitHub](https://img.shields.io/github/license/arnavthorat78/Coding-Help-Module?color=green&label=license&logo=license&logoColor=grey)
