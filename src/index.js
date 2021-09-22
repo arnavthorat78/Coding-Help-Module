@@ -24,8 +24,9 @@ const math = require("./lib/math");
 const bool = require("./lib/bool");
 const number = require("./lib/number");
 const string = require("./lib/string");
+const arr = require("./lib/arr");
 
-const VERSION = "1.2.0";
+const VERSION = "1.2.5";
 
 module.exports = {
 	// Information
@@ -72,4 +73,8 @@ module.exports = {
 	replaceAll: string.replaceAll,
 	removePunctuation: string.removePunctuation,
 	template: string.template,
+	// Array
+	toReadableString: arr.toReadableString,
+	flatten: arr.flatten,
+	forEach: arr.forEach,
 };
