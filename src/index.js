@@ -63,6 +63,7 @@ module.exports = {
 	isAlpha: string.isAlpha,
 	isAlphaNumeric: string.isAlphaNumeric,
 	isEmpty: string.isEmpty,
+	padString: string.padString,
 	isLowerOnly: string.isLowerOnly,
 	isUpperOnly: string.isUpperOnly,
 	isNumericOnly: string.isNumericOnly,

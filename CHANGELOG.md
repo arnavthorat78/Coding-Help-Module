@@ -2,6 +2,12 @@
 
 This file lists all of the updates.
 
+## v1.2.5
+
+This version added some more features, as well as a bug fix!
+
+-   Fixed issue [#1](https://github.com/arnavthorat78/Coding-Help-Module/issues/1#issue-1003803350)!
+
 ## v1.2.0
 
 This version was a major release!
