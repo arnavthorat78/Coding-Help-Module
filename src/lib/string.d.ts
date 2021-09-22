@@ -233,3 +233,45 @@ export const replaceAll: (
 	replaceStr: string,
 	caseSensitive?: boolean
 ) => string;
+
+/**
+ * Remove all punctuation from a string.
+ *
+ * @param str The string to remove the punctuation from.
+ * @returns The string with no puncutuation.
+ */
+export const removePunctuation: (str: string) => string;
+
+/**
+ * Add variables to specified template punctuation. This is like ES6's/ES2021's template literal (except more customizable)!
+ *
+ * Example (for clarification):
+ * ```js
+ * const codingHelp = require("coding-help");
+ *
+ * console.log(codingHelp.template("${packageName} is awesome!", { packageName: "Coding Help" }));
+ * // =>  Coding Help is awesome!
+ * console.log(codingHelp.template("What do you want for #[meal]#?", { meal: "dinner" }, "#[", "]#"));
+ * // =>  What do you want for dinner?
+ *
+ * console.log(codingHelp.template("I like the ${part} part of ${packageName}.", { packageName: "Coding Help" }, "${", "}"));
+ * // =>  WARNING: String contains characters '${' and '}' that were not includes in 'values'.
+ * // =>  I like the ${part} part of Coding Help.
+ * console.log(codingHelp.template("I like the ${part} part of ${packageName}.", { packageName: "Coding Help" }, "${", "}", false));
+ * // =>  I like the ${part} part of Coding Help.
+ * ```
+ *
+ * @param str The string which contains the templates.
+ * @param values An object containing the 'variable' name in the string, and its value.
+ * @param start Optional. Defaults to `${`. Specifies the starting character for the template.
+ * @param end Optional. Defaults to `}`. Specifies the ending character for the template.
+ * @param warning Optional. Defaults to `true`. Specifies if there should be a warning or not if some templates are remaining after replacing.
+ * @returns A string with the variables' values filled in.
+ */
+export const template: (
+	str: string,
+	values: object,
+	start?: string,
+	end?: string,
+	warning?: string
+) => string;

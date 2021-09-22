@@ -8,10 +8,6 @@
 
 > Get features that NodeJS doesn't provide!
 
-## By the way...
-
-See my Google Home website at [this link](https://arnavthorat78.github.io/Google-Home/)!
-
 ## Installation
 
 To install, simply run the following command.
@@ -25,6 +21,67 @@ To use this in your project, you can simply use `require`.
 ```js
 const codingHelp = require("coding-help");
 ```
+
+## Strings
+
+Strings is, so far, the largest section of the Coding Help module. It features many exciting methods to help you with strings!
+
+### Table
+
+See the table to look for commands in the `string` section.
+
+| Command               | Description                                                                                                                                         |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `between`             | Get a part of a word between the left and right from a string.                                                                                      |
+| `toCamelCase`         | Convert a string to camel case.                                                                                                                     |
+| `toTitleCase`         | Convert a string to title case.                                                                                                                     |
+| `removeWhitespace`    | Remove extra spaces in a string with single spaces, and spaces out of the string with none.                                                         |
+| `toTitleCase`         | Convert a string to title case.                                                                                                                     |
+| `containsWord`        | See if a string contains a word. Unline `includes()`, this method checks if there is a _word_, not a part of a word.                                |
+| `countWordOccurences` | Count the amount of word occurences there are in a string. **Be aware that this method only counts word occurences.**                               |
+| `createHTMLTag`       | Create a HTML tag, with the tag name, the content, and the attributes.                                                                              |
+| `isAlpha`             | See if a string is alpha (contains only letters).                                                                                                   |
+| `isAlphaNumeric`      | See if the string is numeric alpha (contains only letters and numbers).                                                                             |
+| `isEmpty`             | See if the string is empty.                                                                                                                         |
+| `padString`           | Pad the string from the start and end with the desired length and characters on each side of the string.                                            |
+| `isLowerOnly`         | Check if a string contains only lower case characters. Also, make sure it contains no whitespace, no uppercase letters, no numbers, and no symbols. |
+| `isUpperOnly`         | Check if a string contains only uppercase characters. Also, make sure it contains no whitespace, no lowercase letters, no numbers, and no symbols.  |
+| `isNumericOnly`       | Check if a string is numeric only.                                                                                                                  |
+| `repeat`              | Repeat a string a specified number of times.                                                                                                        |
+| `urlName`             | Makes a string a valid URL name. It preforms the following operations on the string before returning it.                                            |
+| `removeLatin`         | Remove all Latin letters in a string. _BETA_                                                                                                        |
+| `replaceAll`          | Replace all occurences in a string. This is similar to ES2021's method `replaceAll`.                                                                |
+| `removePunctuation`   | Remove all punctuation from a string.                                                                                                               |
+| `template`            | Add variables to specified template punctuation. This is like ES6's/ES2021's template literal (except more customizable)!                           |
+
+## Numbers
+
+The `numbers` part is helpful for working with number types!
+
+### Table
+
+See the table for you to see what commands are available in the `numbers` section.
+
+| Command          | Description                                            |
+| ---------------- | ------------------------------------------------------ |
+| `removeDecimal`  | Remove the decimal point of a number.                  |
+| `countDigits`    | Count the amount of each digit, from 0-9, in a number. |
+| `lengthOfNumber` | Get the length of a number.                            |
+| `integer`        | See if a number is an integer.                         |
+| `toOrdinal`      | Convert a number to an ordinal (e.g. 78 into 78th).    |
+
+## Booleans
+
+The `boolean` part is helpful for boolean tasks. Right now, there isn't much, but soon, more will come!
+
+### Table
+
+See the table below to look for commands in `booleans`.
+
+| Command      | Description                                                           |
+| ------------ | --------------------------------------------------------------------- |
+| `findStatus` | See if a value is greater than, less than, or equal to another value. |
+| `isNothing`  | See if a value is nothing, according to JavaScript.                   |
 
 ## Math
 
@@ -49,19 +106,6 @@ See the table below to look for the commands in the `math` section.
 | `avg`              | Get the average number from a list of numbers.                                                                       |
 | `compassToDegrees` | Convert a compass heading (e.g. S), and convert it to degrees. **Set to be moved!**                                  |
 | `removeDecimal`    | Remove the decimal from a number. This is helpful if you want to convert a float to an integer. **Set to be moved!** |
-
-## Booleans
-
-The `boolean` part is helpful for boolean tasks. Right now, there isn't much, but soon, more will come!
-
-### Table
-
-See the table below to look for commands in `booleans`.
-
-| Command      | Description                                                           |
-| ------------ | --------------------------------------------------------------------- |
-| `findStatus` | See if a value is greater than, less than, or equal to another value. |
-| `isNothing`  | See if a value is nothing, according to JavaScript.                   |
 
 ## Documentation
 

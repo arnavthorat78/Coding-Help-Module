@@ -204,6 +204,24 @@ const replaceAll = (str, findStr, replaceStr, caseSensitive = true) => {
 	return str.replace(replaceRegExp, replaceStr);
 };
 
+const removePunctuation = (str) => {
+	return str.replace(/[!"#$%&'()*+,-.\\/:;<=>?@[\]^_`{|}~]/g, "");
+};
+
+const template = (str, values, start = "${", end = "}", warning = true) => {
+	for (let value of Object.keys(values)) {
+		str = str.replace(`${start}${value}${end}`, values[value]);
+	}
+
+	if (str.includes(start) && str.includes(end) && warning) {
+		console.log(
+			`WARNING: String contains characters '${start}' and '${end}' that were not includes in 'values'.`
+		);
+	}
+
+	return str;
+};
+
 module.exports = {
 	between,
 	toCamelCase,
@@ -220,7 +238,9 @@ module.exports = {
 	isUpperOnly,
 	isNumericOnly,
 	repeat,
+	urlName,
 	removeLatin,
 	replaceAll,
-	urlName,
+	removePunctuation,
+	template,
 };

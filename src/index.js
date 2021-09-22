@@ -25,7 +25,11 @@ const bool = require("./lib/bool");
 const number = require("./lib/number");
 const string = require("./lib/string");
 
+const VERSION = "1.2.0";
+
 module.exports = {
+	// Information
+	VERSION: VERSION,
 	// Math
 	PI: math.PI,
 	E: math.E,
@@ -62,6 +66,9 @@ module.exports = {
 	isLowerOnly: string.isLowerOnly,
 	isUpperOnly: string.isUpperOnly,
 	isNumericOnly: string.isNumericOnly,
-	removeLatin: string.removeLatin,
 	urlName: string.urlName,
+	removeLatin: string.removeLatin,
+	replaceAll: string.replaceAll,
+	removePunctuation: string.removePunctuation,
+	template: string.template,
 };

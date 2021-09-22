@@ -2,6 +2,14 @@
 
 This file lists all of the updates.
 
+## v1.2.0
+
+This version was a major release!
+
+-   5 `number` methods were introduced!
+-   Countless `string` methods were also added!
+-   The constant `VERSION` arrived.
+
 ## v1.1.5
 
 This version had the simple `booleans` section!
