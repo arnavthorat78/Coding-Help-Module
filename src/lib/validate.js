@@ -140,6 +140,14 @@ const isHexColour = (str, numChar = "6") => {
 	}
 };
 
+const isCase = (str, caseType = "lower") => {
+	if (caseType.toLowerCase() === "upper") {
+		return str === str.toUpperCase();
+	} else {
+		return str === str.toLowerCase();
+	}
+};
+
 module.exports = {
 	validateEmail,
 	validatePassword,
@@ -154,4 +162,5 @@ module.exports = {
 	isASCII,
 	isBase,
 	isHexColour,
+	isCase,
 };

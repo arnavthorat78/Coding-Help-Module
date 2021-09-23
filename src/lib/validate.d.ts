@@ -150,3 +150,12 @@ export const isBase: (str: string, base?: string) => boolean;
  * @returns A boolean, which indicated is a string is a valid hex colour code.
  */
 export const isHexColour: (str: string, numChars?: string) => boolean;
+
+/**
+ * Check if a string is upper or lower case only. Ignores numbers and symbols.
+ *
+ * @param str The string to test.
+ * @param caseType The type of case that should be tested. Values should only be `"upper"` or `"lower"`, otherwise `lower` is chosen by default. This is optional.
+ * @returns A boolean, indicating if the string passed or not.
+ */
+export const isCase: (str: string, caseType?: string) => boolean;

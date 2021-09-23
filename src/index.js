@@ -86,4 +86,5 @@ module.exports = {
 	isASCII: validate.isASCII,
 	isBase: validate.isBase,
 	isHexColour: validate.isHexColour,
+	isCase: validate.isCase,
 };
