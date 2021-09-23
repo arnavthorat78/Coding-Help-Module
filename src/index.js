@@ -25,6 +25,7 @@ const bool = require("./lib/bool");
 const number = require("./lib/number");
 const string = require("./lib/string");
 const arr = require("./lib/arr");
+const validate = require("./lib/validate");
 
 const VERSION = "1.2.5";
 
@@ -77,4 +78,7 @@ module.exports = {
 	toReadableString: arr.toReadableString,
 	flatten: arr.flatten,
 	forEach: arr.forEach,
+	// Validator
+	validateEmail: validate.validateEmail,
+	validatePassword: validate.validatePassword,
 };

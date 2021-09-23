@@ -148,14 +148,6 @@ export const avg: (...numbers: number[]) => number;
  */
 export const compassToDegrees: (compass: string) => number | number[];
 
-/**
- * Remove the decimal point of a number.
- *
- * @param number A number to remove the decimal point.
- * @returns The integer form of the number.
- */
-export const removeDecimal: (number: number) => number;
-
 // Boolean //
 
 /**
