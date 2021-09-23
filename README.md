@@ -33,29 +33,23 @@ Strings is, so far, the largest section of the Coding Help module. It features m
 
 See the table to look for commands in the `string` section.
 
-| Command               | Description                                                                                                                                         |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `between`             | Get a part of a word between the left and right from a string.                                                                                      |
-| `toCamelCase`         | Convert a string to camel case.                                                                                                                     |
-| `toTitleCase`         | Convert a string to title case.                                                                                                                     |
-| `removeWhitespace`    | Remove extra spaces in a string with single spaces, and spaces out of the string with none.                                                         |
-| `toTitleCase`         | Convert a string to title case.                                                                                                                     |
-| `containsWord`        | See if a string contains a word. Unline `includes()`, this method checks if there is a _word_, not a part of a word.                                |
-| `countWordOccurences` | Count the amount of word occurences there are in a string. **Be aware that this method only counts word occurences.**                               |
-| `createHTMLTag`       | Create a HTML tag, with the tag name, the content, and the attributes.                                                                              |
-| `isAlpha`             | See if a string is alpha (contains only letters).                                                                                                   |
-| `isAlphaNumeric`      | See if the string is numeric alpha (contains only letters and numbers).                                                                             |
-| `isEmpty`             | See if the string is empty.                                                                                                                         |
-| `padString`           | Pad the string from the start and end with the desired length and characters on each side of the string.                                            |
-| `isLowerOnly`         | Check if a string contains only lower case characters. Also, make sure it contains no whitespace, no uppercase letters, no numbers, and no symbols. |
-| `isUpperOnly`         | Check if a string contains only uppercase characters. Also, make sure it contains no whitespace, no lowercase letters, no numbers, and no symbols.  |
-| `isNumericOnly`       | Check if a string is numeric only.                                                                                                                  |
-| `repeat`              | Repeat a string a specified number of times.                                                                                                        |
-| `urlName`             | Makes a string a valid URL name. It preforms the following operations on the string before returning it.                                            |
-| `removeLatin`         | Remove all Latin letters in a string. _BETA_                                                                                                        |
-| `replaceAll`          | Replace all occurences in a string. This is similar to ES2021's method `replaceAll`.                                                                |
-| `removePunctuation`   | Remove all punctuation from a string.                                                                                                               |
-| `template`            | Add variables to specified template punctuation. This is like ES6's/ES2021's template literal (except more customizable)!                           |
+| Command               | Description                                                                                                               |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `between`             | Get a part of a word between the left and right from a string.                                                            |
+| `toCamelCase`         | Convert a string to camel case.                                                                                           |
+| `toTitleCase`         | Convert a string to title case.                                                                                           |
+| `removeWhitespace`    | Remove extra spaces in a string with single spaces, and spaces out of the string with none.                               |
+| `toTitleCase`         | Convert a string to title case.                                                                                           |
+| `containsWord`        | See if a string contains a word. Unline `includes()`, this method checks if there is a _word_, not a part of a word.      |
+| `countWordOccurences` | Count the amount of word occurences there are in a string. **Be aware that this method only counts word occurences.**     |
+| `createHTMLTag`       | Create a HTML tag, with the tag name, the content, and the attributes.                                                    |
+| `padString`           | Pad the string from the start and end with the desired length and characters on each side of the string.                  |
+| `repeat`              | Repeat a string a specified number of times.                                                                              |
+| `urlName`             | Makes a string a valid URL name. It preforms the following operations on the string before returning it.                  |
+| `removeLatin`         | Remove all Latin letters in a string. _BETA_                                                                              |
+| `replaceAll`          | Replace all occurences in a string. This is similar to ES2021's method `replaceAll`.                                      |
+| `removePunctuation`   | Remove all punctuation from a string.                                                                                     |
+| `template`            | Add variables to specified template punctuation. This is like ES6's/ES2021's template literal (except more customizable)! |
 
 ## Numbers
 

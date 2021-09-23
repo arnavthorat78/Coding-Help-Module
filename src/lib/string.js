@@ -112,20 +112,6 @@ const createHTMLTag = (tag, content, attributes = {}) => {
 	return fullHTML;
 };
 
-const isAlpha = (str) => {
-	const alphaRegExp = /^[A-Za-z]+$/g;
-	return alphaRegExp.test(str);
-};
-const isAlphaNumeric = (str) => {
-	const alphaRegExp = /^[A-Za-z0-9]+$/;
-	return alphaRegExp.test(str);
-};
-
-const isEmpty = (str) => {
-	if (/\s/g.test(str) || typeof str === "undefined" || str === null) return true;
-	else return false;
-};
-
 const padString = (str, len, char = " ") => {
 	let stringArr = [str];
 
@@ -142,28 +128,6 @@ const padString = (str, len, char = " ") => {
 	stringArr.push(endPad);
 
 	return stringArr.join("");
-};
-
-const isLowerOnly = (str) => {
-	const lowerRegExp = /^[a-z]+$/g;
-
-	return lowerRegExp.test(str);
-};
-const isUpperOnly = (str) => {
-	const upperRegExp = /^[A-Z]+$/g;
-
-	return upperRegExp.test(str);
-};
-
-const isNumericOnly = (str, numOnly = true) => {
-	const numOnlyRegExp = /^[0-9]+$/g;
-	const otherNumRegExp = /^[0-9]+|-|\.|(?:^|\s)(Infinity)(?=\s|$)|(?:^|\s)(-Infinity)(?=\s|$)$/g;
-
-	if (!numOnly) {
-		return otherNumRegExp.test(str);
-	} else {
-		return numOnlyRegExp.test(str);
-	}
 };
 
 const repeat = (str, num, seperator = "", lastChar = "") => {
@@ -230,13 +194,7 @@ module.exports = {
 	containsWord,
 	countWordOccurences,
 	createHTMLTag,
-	isAlpha,
-	isAlphaNumeric,
-	isEmpty,
 	padString,
-	isLowerOnly,
-	isUpperOnly,
-	isNumericOnly,
 	repeat,
 	urlName,
 	removeLatin,
