@@ -56,7 +56,7 @@ const integer = (num) => {
 	return !num.toString().includes(".");
 };
 
-const toOrdinial = (num) => {
+const toOrdinal = (num) => {
 	const number = num.toString();
 
 	if (
@@ -85,5 +85,5 @@ module.exports = {
 	countDigits,
 	lengthOfNumber,
 	integer,
-	toOrdinial,
+	toOrdinal,
 };

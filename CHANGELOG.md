@@ -4,9 +4,16 @@ This file lists all of the updates.
 
 ## v1.2.5
 
-This version added some more features, as well as a bug fix!
+This version added some more features, as well as a few bug fixes!
 
--   Fixed issue [#1](https://github.com/arnavthorat78/Coding-Help-Module/issues/1#issue-1003803350)!
+-   Fixed issue [#1](https://github.com/arnavthorat78/Coding-Help-Module/issues/1)!
+-   Fixed issue [#2](https://github.com/arnavthorat78/Coding-Help-Module/issues/2)!
+-   Fixed a few bugs where methods would not import correctly.
+
+It added two new sections as well; `array` and `validate`!
+
+-   Added a new section called `array`.
+-   Added many methods for the new section `validate`!
 
 ## v1.2.0
 

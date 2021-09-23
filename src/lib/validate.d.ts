@@ -159,3 +159,11 @@ export const isHexColour: (str: string, numChars?: string) => boolean;
  * @returns A boolean, indicating if the string passed or not.
  */
 export const isCase: (str: string, caseType?: string) => boolean;
+
+/**
+ * Check if a string is a valid URL.
+ *
+ * @param str The URL string to check.
+ * @returns A boolean, which indicates if the URL is valid or not.
+ */
+export const isURL: (str: string) => boolean;

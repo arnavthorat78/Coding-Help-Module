@@ -16,6 +16,8 @@
 		"math",
 		"boolean",
 		"number",
-		"string"
+		"string",
+		"array",
+		"validator"
 	]
 }

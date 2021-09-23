@@ -63,6 +63,7 @@ module.exports = {
 	countWordOccurences: string.countWordOccurences,
 	createHTMLTag: string.createHTMLTag,
 	padString: string.padString,
+	repeat: string.repeat,
 	urlName: string.urlName,
 	removeLatin: string.removeLatin,
 	replaceAll: string.replaceAll,
@@ -87,4 +88,5 @@ module.exports = {
 	isBase: validate.isBase,
 	isHexColour: validate.isHexColour,
 	isCase: validate.isCase,
+	isURL: validate.isURL,
 };

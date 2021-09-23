@@ -80,6 +80,46 @@ See the table below to look for commands in `booleans`.
 | `findStatus` | See if a value is greater than, less than, or equal to another value. |
 | `isNothing`  | See if a value is nothing, according to JavaScript.                   |
 
+## Array
+
+Arrays are helpful for storing data. This small `array` section will get your jobs with arrays done faster!
+
+### Table
+
+See the table for commands in `array`.
+
+| Command            | Description                                                                   |
+| ------------------ | ----------------------------------------------------------------------------- |
+| `toReadableString` | Convert an array to a human-readable string.                                  |
+| `flatten`          | Flatten nested arrays to one whole non-nested array.                          |
+| `forEach`          | Loop over each element in an array. This is like `Array.prototype.forEach()`. |
+
+## Validator
+
+The `validator` makes it easier to validate user input, data, and much more!
+
+### Table
+
+See the table for information of commands in the `validator` section.
+
+| Command            | Description                                                                 |
+| ------------------ | --------------------------------------------------------------------------- |
+| `validateEmail`    | Validate an email.                                                          |
+| `validatePassword` | Validate a password. _BETA_                                                 |
+| `isAlpha`          | See if a string is alpha (contains only letters).                           |
+| `isAlphaNumeric`   | See if the string is numeric alpha (contains only letters and numbers).     |
+| `isEmpty`          | See if the string is empty.                                                 |
+| `isLowerOnly`      | Check if a string contains only lower case characters.                      |
+| `isUpperOnly`      | Check if a string contains only uppercase characters.                       |
+| `isNumericOnly`    | Check if a string is numeric only, with some conditions.                    |
+| `isCurrency`       | See if a currency is valid or not.                                          |
+| `isEqual`          | See if two strings are identical.                                           |
+| `isASCII`          | See if a string contains ASCII.                                             |
+| `isBase`           | Check if a string is Base32 or Base64 encoded.                              |
+| `isHexColour`      | Check if a string is a 3 or 6-digit hex colour code.                        |
+| `isCase`           | Check if a string is upper or lower case only. Ignores numbers and symbols. |
+| `isURL`            | Check if a string is a valid URL.                                           |
+
 ## Math
 
 The `math` part of the Coding Help module is very helpful for doing mathematics activities!
