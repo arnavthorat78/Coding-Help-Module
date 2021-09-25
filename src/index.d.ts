@@ -417,7 +417,7 @@ export const replaceAll: (
 export const removePunctuation: (str: string) => string;
 
 /**
- * Add variables to specified template punctuation. This is like ES6's/ES2021's template literal (except more customizable)!
+ * Add variables to specified template punctuation. This is like ES6's/ES2015's template literal (except more customizable)!
  *
  * Example (for clarification):
  * ```js
@@ -508,6 +508,7 @@ export const validateEmail: (email: string) => boolean;
  * *  `containsSymbols` (default is `true`) - If the password should contain symbols or not.
  * *  `containsLetters` (default is `true`) - If the password should contains letters or not.
  * *  `containsNumbers` (default is `true`) - If the password should contains numbers or not.
+ * *  `strict` (default is `false`) - Enforce strict checking, so the password must contain letters, numbers, and symbols (unless those values are `false`).
  * *  `trim` (default is `true`) - If the password's whitespace on the sides should be removed before testing.
  *
  * @param password The password to validate.
@@ -523,6 +524,7 @@ export const validatePassword: (
 		containsSymbols: boolean;
 		containsLetters: boolean;
 		containsNumber: boolean;
+		strict: boolean;
 		trim: boolean;
 	}
 ) => boolean;

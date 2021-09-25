@@ -27,11 +27,11 @@ const codingHelp = require("coding-help");
 
 ## Strings
 
-Strings is, so far, the largest section of the Coding Help module. It features many exciting methods to help you with strings!
+`strings` is, so far, the largest section of the Coding Help module. It features many exciting methods to help you with strings!
 
 ### Table
 
-See the table to look for commands in the `string` section.
+See the table to look for commands in the `strings` section.
 
 | Command               | Description                                                                                                               |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -49,7 +49,7 @@ See the table to look for commands in the `string` section.
 | `removeLatin`         | Remove all Latin letters in a string. _BETA_                                                                              |
 | `replaceAll`          | Replace all occurences in a string. This is similar to ES2021's method `replaceAll`.                                      |
 | `removePunctuation`   | Remove all punctuation from a string.                                                                                     |
-| `template`            | Add variables to specified template punctuation. This is like ES6's/ES2021's template literal (except more customizable)! |
+| `template`            | Add variables to specified template punctuation. This is like ES6's/ES2015's template literal (except more customizable)! |
 
 ## Numbers
 

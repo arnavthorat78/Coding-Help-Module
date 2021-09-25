@@ -196,7 +196,7 @@ export const replaceAll: (
 export const removePunctuation: (str: string) => string;
 
 /**
- * Add variables to specified template punctuation. This is like ES6's/ES2021's template literal (except more customizable)!
+ * Add variables to specified template punctuation. This is like ES6's/ES2015's template literal (except more customizable)!
  *
  * Example (for clarification):
  * ```js

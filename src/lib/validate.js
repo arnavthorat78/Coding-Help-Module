@@ -36,21 +36,77 @@ const validatePassword = (
 		containsSymbols: true,
 		containsLetters: true,
 		containsNumbers: true,
+		strict: false,
 		trim: true,
 	}
 ) => {
+	if (options.minChars === undefined || options.minChars === null) {
+		options.minChars = 6;
+	}
+	if (options.maxChars === undefined || options.maxChars === null) {
+		options.maxChars = 14;
+	}
+	if (options.nonContaining === undefined || options.nonContaining === null) {
+		options.nonContaining = ["password"];
+	}
+	if (options.containsSymbols === undefined || options.containsSymbols === null) {
+		options.containsSymbols = true;
+	}
+	if (options.containsLetters === undefined || options.containsLetters === null) {
+		options.containsLetters = true;
+	}
+	if (options.containsNumbers === undefined || options.containsNumbers === null) {
+		options.containsNumbers = true;
+	}
+	if (options.strict === undefined || options.strict === null) {
+		options.strict = false;
+	}
+	if (options.trim === undefined || options.trim === null) {
+		options.trim = true;
+	}
+
+	const symbols = [
+		"!",
+		'"',
+		"#",
+		"$",
+		"%",
+		"&",
+		"'",
+		"(",
+		")",
+		"*",
+		"+",
+		",",
+		"-",
+		".",
+		"\\",
+		"/",
+		":",
+		";",
+		"<",
+		"=",
+		">",
+		"?",
+		"@",
+		"[",
+		"]",
+		"^",
+		"_",
+		"`",
+		"{",
+		"|",
+		"}",
+		"~",
+	];
+	const letters = /[A-Za-z]/g;
+	const numbers = /[0-9]/g;
+
 	if (options.trim) {
 		password = password.trim();
 	}
 
-	let symbols = /[!"#$%&'()*+,-.\\/:;<=>?@[\]^_`{|}~]/g;
-	const passwordRegExp = new RegExp(
-		`[${options.containsLetters ? "A-Za-z" : ""}${options.containsNumbers ? "0-9" : ""}${
-			options.containsSymbols ? symbols : ""
-		}]{${options.minChars ? options.minChars : ""},${options.maxChars ? options.maxChars : ""}}`
-	);
-
-	if (!passwordRegExp.test(password)) {
+	if (password < options.minChars || password > options.maxChars) {
 		return false;
 	}
 
@@ -59,6 +115,43 @@ const validatePassword = (
 			return false;
 		}
 	});
+
+	if (!options.containsSymbols) {
+		symbols.forEach((symbol) => {
+			if (password.includes(symbol)) {
+				return false;
+			}
+		});
+	}
+
+	if (!options.containsLetters && !letters.test(password)) {
+		return false;
+	}
+
+	if (!options.containsNumbers && !numbers.test(password)) {
+		return false;
+	}
+
+	if (options.strict) {
+		if (options.containsSymbols) {
+			let containsSymbol = false;
+			symbols.forEach((symbol) => {
+				if (password.includes(symbol)) {
+					containsSymbol = true;
+				}
+			});
+
+			if (!containsSymbol) return false;
+		}
+
+		if (options.containsNumbers && !numbers.test(password)) {
+			return false;
+		}
+
+		if (options.containsLetters && !letters.test(password)) {
+			return false;
+		}
+	}
 
 	return true;
 };
