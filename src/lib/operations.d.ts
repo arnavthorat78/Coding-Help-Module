@@ -80,3 +80,25 @@
  * @returns The method doesn't return anything, but it creates a file.
  */
 export const createCSV: (data: any[][], fileName: string) => void;
+
+/**
+ * Get data from a URL location.
+ *
+ * ```js
+ * getData("https://jsonplaceholder.typicode.com/users")
+ *  .then((res) => {
+ *		console.log(res.data);
+ *	})
+ *	.catch((err) => {
+ *		console.log(err);
+ *	});
+ * ```
+ *
+ * This should output an object, containing all of the data retrieved.
+ *
+ * @param url The URL to retrieve the data from.
+ * @returns A Promise, which contains an object. The object has the `headerDate`, the `statusCode`, and the `data`.
+ */
+export const getData: (
+	url: string
+) => Promise<{ headerDate: string; statusCode: number; data: object }>;

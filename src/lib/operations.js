@@ -50,7 +50,6 @@ const createCSV = (data, fileName) => {
 	);
 };
 
-// TODO Add a declaration for this method
 const getData = (url) => {
 	return new Promise((resolve, reject) => {
 		https
