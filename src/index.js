@@ -26,6 +26,7 @@ const number = require("./lib/number");
 const string = require("./lib/string");
 const arr = require("./lib/arr");
 const validate = require("./lib/validate");
+const operations = require("./lib/operations");
 
 const VERSION = "1.2.5";
 
@@ -71,7 +72,6 @@ module.exports = {
 	removePunctuation: string.removePunctuation,
 	template: string.template,
 	// Array
-	createCSV: arr.createCSV,
 	toReadableString: arr.toReadableString,
 	flatten: arr.flatten,
 	// Validator
@@ -90,4 +90,7 @@ module.exports = {
 	isHexColour: validate.isHexColour,
 	isCase: validate.isCase,
 	isURL: validate.isURL,
+	// Operations
+	createCSV: operations.createCSV,
+	getData: operations.getData,
 };
