@@ -20,6 +20,35 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+const fs = require("fs");
+
+const createCSV = (data, fileName) => {
+	if (!Array.isArray(data)) {
+		throw new TypeError(`Expected an array of arrays, but got ${typeof data}.`);
+	}
+
+	data.forEach((value, index) => {
+		if (!Array.isArray(value)) {
+			throw new TypeError(`Expected a nested array, but got ${typeof value}.`);
+		}
+
+		if (index !== 0) {
+			value[0] = `\n${value[0]}`;
+		}
+	});
+
+	fs.writeFile(
+		fileName.endsWith(".csv") ? fileName : fileName + ".csv",
+		data.toString(),
+		"utf8",
+		(err) => {
+			if (err) {
+				throw err;
+			}
+		}
+	);
+};
+
 const toReadableString = (arr, sep = ", ", lastSep = "and ", end = ".") => {
 	let str = "";
 	arr.forEach((value, index) => {
@@ -39,14 +68,8 @@ const flatten = (arr) => {
 	}, []);
 };
 
-const forEach = (arr, callback) => {
-	for (let i = 0; i < arr.length; i++) {
-		callback(arr[i], i, arr);
-	}
-};
-
 module.exports = {
+	createCSV,
 	toReadableString,
 	flatten,
-	forEach,
 };

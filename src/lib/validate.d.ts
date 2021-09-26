@@ -42,6 +42,8 @@ export const validateEmail: (email: string) => boolean;
  * *  `strict` (default is `false`) - Enforce strict checking, so the password must contain letters, numbers, and symbols (unless those values are `false`).
  * *  `trim` (default is `true`) - If the password's whitespace on the sides should be removed before testing.
  *
+ * _Tip! Set `maxChars` to `Infinity` for no maximum number of characters!_
+ *
  * @param password The password to validate.
  * @param options Optional. The options for validating the password with. See the bullet points in the description for each field.
  * @returns A boolean, which indicates if the password passed the test or not.

@@ -54,6 +54,7 @@ module.exports = {
 	lengthOfNumber: number.lengthOfNumber,
 	integer: number.integer,
 	toOrdinal: number.toOrdinal,
+	convertToRoman: number.convertToRoman,
 	// String
 	between: string.between,
 	toCamelCase: string.toCamelCase,
@@ -70,9 +71,9 @@ module.exports = {
 	removePunctuation: string.removePunctuation,
 	template: string.template,
 	// Array
+	createCSV: arr.createCSV,
 	toReadableString: arr.toReadableString,
 	flatten: arr.flatten,
-	forEach: arr.forEach,
 	// Validator
 	validateEmail: validate.validateEmail,
 	validatePassword: validate.validatePassword,

@@ -81,3 +81,11 @@ export const integer: (num: number) => boolean;
  * @returns The ordinal number (which is a string). The returned value is the number suffixed with its appropriate ordinal.
  */
 export const toOrdinal: (num: number) => string;
+
+/**
+ * Convert a number to a Roman numeral (e.g. `4` into _IV_). Credits to [StackOverflow](https://stackoverflow.com/questions/9083037/convert-a-number-into-a-roman-numeral-in-javascript).
+ *
+ * @param num The number to convert.
+ * @returns The number represented by a Roman numeral.
+ */
+export const convertToRoman: (num: number) => string;
