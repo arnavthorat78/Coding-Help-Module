@@ -28,7 +28,6 @@
  * @param lastSep The seperator before the last value.
  * @param end The ending punctuation.
  * @returns The readable string.
- * @throws A `TypeError` if the array passed in is not of type `array`.
  */
 export const toReadableString: (
 	arr: string[] | number[] | boolean[],
@@ -42,6 +41,5 @@ export const toReadableString: (
  *
  * @param arr The array to flatten.
  * @returns The flattened array.
- * @throws A `TypeError` if the array is not an `array` type.
  */
 export const flatten: (arr: any[]) => any[];

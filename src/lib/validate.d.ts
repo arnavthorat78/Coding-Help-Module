@@ -78,12 +78,18 @@ export const isAlpha: (str: string) => boolean;
 export const isAlphaNumeric: (str: string) => boolean;
 
 /**
- * See if the string is empty. This means that it either consists of only whitespace, or it is equal to `null` or `undefined`.
+ * See if a value is empty.
  *
- * @param str The string to test if it is empty or not.
- * @returns A booleaning indicating whether or not the string is empty.
+ * This depends on if you set `options.JSEmpty` to `true` or `false`.
+ * If you set it to `false` (which is the default), the function will check if the value either consists of whitespace or is empty (for strings), is `null` or `undefined`, or if an array or object has no values.
+ *
+ * If you set `options.JSEmpty` to `true`, it will simply follow the JavaScript standard for if it is truthy or falsy.
+ *
+ * @param str The value to test if it is empty or not.
+ * @param options An object, with default options of `JSEmpty` (defaulted to `false`), which is a boolean.
+ * @returns A booleaning indicating whether or not the value is empty.
  */
-export const isEmpty: (str: string) => boolean;
+export const isEmpty: (value: any, options: { JSEmpty: boolean }) => boolean;
 
 /**
  * Check if a string contains only lower case characters. Also, make sure it contains no whitespace, no uppercase letters, no numbers, and no symbols.

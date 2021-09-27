@@ -165,9 +165,20 @@ const isAlphaNumeric = (str) => {
 	return alphaRegExp.test(str);
 };
 
-const isEmpty = (str) => {
-	if (/\s/g.test(str) || typeof str === "undefined" || str === null) return true;
-	else return false;
+const isEmpty = (value, options = { JSEmpty: false }) => {
+	if (!options.JSEmpty) {
+		if (/\s/g.test(value) || value === undefined || value === null) {
+			return true;
+		} else if (Array.isArray(value) && value.length === 0) {
+			return true;
+		} else if (typeof value === "object" && Object.keys(value).length === 0) {
+			return true;
+		} else {
+			return false;
+		}
+	} else {
+		return !Boolean(value);
+	}
 };
 
 const isLowerOnly = (str) => {
