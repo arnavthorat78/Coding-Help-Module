@@ -102,3 +102,13 @@ export const createCSV: (data: any[][], fileName: string) => void;
 export const getData: (
 	url: string
 ) => Promise<{ headerDate: string; statusCode: number; data: object }>;
+
+/**
+ * Check if a website is up.
+ *
+ * **Important Note!** The Promise returned will never `reject`! Instead, it will be `false` if there was no response (or a bad response).
+ *
+ * @param uri The URL to check.
+ * @returns A Promise, which contains a boolean, indicating whether or not the website is up or not.
+ */
+export const isUp: (uri: string) => Promise<boolean>;

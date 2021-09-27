@@ -22,6 +22,8 @@
 
 const fs = require("fs");
 const https = require("https");
+const http = require("http");
+const url = require("url");
 
 const createCSV = (data, fileName) => {
 	if (!Array.isArray(data)) {
@@ -81,7 +83,36 @@ const getData = (url) => {
 	});
 };
 
+const isUp = (uri) => {
+	const address = url.parse(uri);
+	const parts = uri.split("/");
+
+	const options = {
+		host: address.protocol != null ? address.host : parts[0],
+		method: "HEAD",
+		path: address.protocol != null ? address.pathname : parts.slice(1).join("/"),
+	};
+
+	const req = http.request(options);
+	req.end();
+
+	const promise = new Promise((resolve, reject) => {
+		let connected = false;
+		req.on("response", (res) => {
+			connected = res.statusCode < 500;
+			resolve(connected);
+		});
+
+		req.on("error", (err) => {
+			resolve(connected);
+		});
+	});
+
+	return promise;
+};
+
 module.exports = {
 	createCSV,
 	getData,
+	isUp,
 };
