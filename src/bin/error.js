@@ -20,28 +20,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-/**
- * Convert an array to a human-readable string.
- *
- * @param arr The array to convert. It is recommended for it to either be a string, number, or boolean-containing array, otherwise the contents may not be displayed properly.
- * @param sep The seperator for each value (except for the last one).
- * @param lastSep The seperator before the last value.
- * @param end The ending punctuation.
- * @returns The readable string.
- * @throws A `TypeError` if the array passed in is not of type `array`.
- */
-export const toReadableString: (
-	arr: string[] | number[] | boolean[],
-	sep?: string,
-	lastSep?: string,
-	end?: string
-) => string;
+const _anOrA = (value) => {
+	const anOrA = value.toString().split("")[0].toLowerCase();
+	if (anOrA === "a" || anOrA === "e" || anOrA === "i" || anOrA === "o" || anOrA === "u") {
+		return "an";
+	} else {
+		return "a";
+	}
+};
 
-/**
- * Flatten nested arrays to one whole non-nested array.
- *
- * @param arr The array to flatten.
- * @returns The flattened array.
- * @throws A `TypeError` if the array is not an `array` type.
- */
-export const flatten: (arr: any[]) => any[];
+const _dynamicTypeOfError = (value, expected) => {
+	value = !value ? typeof value : value;
+	expected = !expected ? typeof expected : expected;
+
+	const anOrAValue = _anOrA(value);
+	const anOrAExpected = _anOrA(expected);
+
+	return `Expected ${anOrAExpected} ${expected}, but got ${anOrAValue} ${typeof value}.`;
+};
+
+module.exports = {
+	_anOrA,
+	_dynamicTypeOfError,
+};

@@ -20,7 +20,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+const error = require("../bin/error")._dynamicTypeOfError;
+
 const toReadableString = (arr, sep = ", ", lastSep = "and ", end = ".") => {
+	if (!Array.isArray(arr)) {
+		throw new TypeError(error(arr, "array"));
+	}
+
 	let str = "";
 	arr.forEach((value, index) => {
 		if (index !== arr.length - 1) {
@@ -34,6 +40,10 @@ const toReadableString = (arr, sep = ", ", lastSep = "and ", end = ".") => {
 };
 
 const flatten = (arr) => {
+	if (!Array.isArray(arr)) {
+		throw new TypeError(error(arr, "array"));
+	}
+
 	return arr.reduce((flat, toFlatten) => {
 		return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
 	}, []);

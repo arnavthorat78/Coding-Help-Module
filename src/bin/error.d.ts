@@ -21,27 +21,18 @@
 // SOFTWARE.
 
 /**
- * Convert an array to a human-readable string.
+ * Check if a string should be _an_ or _a_.
  *
- * @param arr The array to convert. It is recommended for it to either be a string, number, or boolean-containing array, otherwise the contents may not be displayed properly.
- * @param sep The seperator for each value (except for the last one).
- * @param lastSep The seperator before the last value.
- * @param end The ending punctuation.
- * @returns The readable string.
- * @throws A `TypeError` if the array passed in is not of type `array`.
+ * @param value The string to check.
+ * @returns Either _an_ or _a_.
  */
-export const toReadableString: (
-	arr: string[] | number[] | boolean[],
-	sep?: string,
-	lastSep?: string,
-	end?: string
-) => string;
+export const _anOrA: (value: string) => "an" | "a";
 
 /**
- * Flatten nested arrays to one whole non-nested array.
+ * Make a template for a dynamic typeof error.
  *
- * @param arr The array to flatten.
- * @returns The flattened array.
- * @throws A `TypeError` if the array is not an `array` type.
+ * @param value The value that the (user) has passed in.
+ * @param expected The expected value. It must be either one of the values listed above for JavaScript validity.
+ * @returns The string template.
  */
-export const flatten: (arr: any[]) => any[];
+export const _dynamicTypeOfError: (value: any, expected: string) => string;
